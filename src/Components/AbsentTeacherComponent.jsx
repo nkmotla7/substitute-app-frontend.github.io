@@ -127,7 +127,7 @@ const AbsentTeacherComponet = () => {
       {absentTeacher.map((teacher, index) => (
         <div key={teacher.id}>
           <h1>{teacher.name}</h1>
-          <table className="table table-bordered">
+          <table className="table table-bordered table-striped">
             <tbody>
               {Object.entries(teacher).map(([key, value], index1) => {
                 // Check if value is empty
@@ -152,14 +152,19 @@ const AbsentTeacherComponet = () => {
                       <td>
                         {key} :{value}
                       </td>
-                      <td>
-                        <button onClick={handleClick(key, teacher.day)}>
-                          Refresh
+                      <td className="d-flex justify-content-evenly">
+                        <button
+                          className="btn btn-danger"
+                          onClick={handleClick(key, teacher.day)}
+                        >
+                          <i className="bi bi-bootstrap-reboot"></i>
                         </button>
                         <select
+                          className="form-select"
+                          aria-label="Default select example"
                           onChange={(e) => onChangeEvent(key, value)(e, index)}
                           style={{
-                            width: "150px",
+                            width: "30vw",
                           }}
                         >
                           {vacantTeach.map((vacant) => (
@@ -172,6 +177,7 @@ const AbsentTeacherComponet = () => {
                           ))}
                         </select>
                         <button
+                          className="btn btn-success"
                           onClick={(e) => handleClickSubmit(e, index, index1)}
                         >
                           Done
@@ -187,7 +193,9 @@ const AbsentTeacherComponet = () => {
           </table>
         </div>
       ))}
-      <button onClick={handleClickNext}>Next</button>
+      <button className="btn btn-primary btn-lg" onClick={handleClickNext}>
+        Next
+      </button>
     </>
   );
 };
