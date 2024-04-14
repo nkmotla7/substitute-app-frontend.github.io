@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const REST_API_BASE_URL = "http://13.201.118.247:8080/";
+const REST_API_BASE_URL = "https://65.2.34.62:8080/";
 
 export const listTeachers = () => {
   return axios.get(REST_API_BASE_URL + "getTeachers");
