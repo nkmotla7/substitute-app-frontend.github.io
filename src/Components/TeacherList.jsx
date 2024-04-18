@@ -44,7 +44,7 @@ const TeacherList = () => {
     //   }
     // }
 
-    fetch("https://65.2.34.62:8080/updateTeachers", {
+    fetch("http://13.126.138.162:8080/updateTeachers", {
       method: "POST",
       body: JSON.stringify(teachers),
       headers: {
@@ -73,7 +73,7 @@ const TeacherList = () => {
         console.log(error);
       });
 
-    // fetch("https://65.2.34.62:8080/getTeachers")
+    // fetch("http://13.126.138.162:8080/getTeachers")
     //   .then((response) => response.json())
     //   .then((data) => setTeachers(data))
     //   .then((err) => console.log(err));
