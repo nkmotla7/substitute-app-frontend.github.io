@@ -14,7 +14,7 @@ const ExcelUpload = () => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("files", file);
-    fetch("http://35.154.239.180:8080/exam-import-excel", {
+    fetch("http://13.126.112.84:8080/exam-import-excel", {
       method: "POST",
       body: formData,
     })

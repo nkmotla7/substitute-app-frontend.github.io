@@ -19,7 +19,7 @@ const AbsentTeacherComponet = () => {
     console.log(key);
     console.log(e);
     console.log(day);
-    const url = "http://35.154.239.180:8080/getVacantTeachers/" + key + "/" + day;
+    const url = "http://13.126.112.84:8080/getVacantTeachers/" + key + "/" + day;
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
@@ -79,7 +79,7 @@ const AbsentTeacherComponet = () => {
     // }
     console.log(JSON.stringify(subData));
 
-    fetch("http://35.154.239.180:8080/updateSubstitute", {
+    fetch("http://13.126.112.84:8080/updateSubstitute", {
       method: "POST",
       body: JSON.stringify(absentTeacher),
       headers: {
@@ -116,7 +116,7 @@ const AbsentTeacherComponet = () => {
         console.log(error);
       });
 
-    // fetch("http://35.154.239.180:8080/getTeachers")
+    // fetch("http://13.126.112.84:8080/getTeachers")
     //   .then((response) => response.json())
     //   .then((data) => setTeachers(data))
     //   .then((err) => console.log(err));
